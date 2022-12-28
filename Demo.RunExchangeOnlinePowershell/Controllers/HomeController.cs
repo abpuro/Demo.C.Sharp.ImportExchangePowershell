@@ -26,37 +26,43 @@ namespace Demo.RunExchangeOnlinePowershell.Controllers
 
             InitialSessionState iss = InitialSessionState.CreateDefault();
             iss.ExecutionPolicy = Microsoft.PowerShell.ExecutionPolicy.Bypass;
-            iss.ImportPSModule(new[] { "ExchangeOnlineManagement" });
-
+            iss.ThrowOnRunspaceOpenError = false;
+            //string path = _hostingEnvironment.WebRootPath + "\\bin\\Debug\\net7.0\\ExchangeOnlineManagement\\2.0.5\\ExchangeOnlineManagement.psd1"; 
+            //iss.ImportPSModulesFromPath(path);
+            iss.ImportPSModule(new string[] { "ExchangeOnlineManagement" });
+            string moduleName = "";
             Runspace rs = RunspaceFactory.CreateRunspace(iss);
             try
             {
 
                 rs.Open();
-                PowerShell ps = PowerShell.Create();
-                ps.Runspace = rs;
+                PowerShell ps = PowerShell.Create(rs);
 
-                //Collection<PSObject> results = ps.AddCommand("Connect-ExchangeOnline").AddParameter("UserPrincipalName", "admin@m365devsub.onmicrosoft.com").Invoke();
-                Collection<PSObject> results = ps.AddCommand("Get-Module").Invoke();
-
-
-
-                if (ps.HadErrors)
+               // Collection<PSObject> results = ps.AddCommand("$Env:PSModulePath").Invoke();
+                Collection<PSObject> results0 = ps.AddScript("$Env:PSModulePath = $Env:PSModulePath+\";C:\\home\\site\\wwwroot\\Modules\\\"").Invoke();
+                Collection<PSObject> results1 = ps.AddScript("$Env:PSModulePath").Invoke();
+                Collection<PSObject> results2 = ps.AddCommand("Connect-ExchangeOnline").AddParameter("UserPrincipalName", "admin@m365devsub.onmicrosoft.com").Invoke();
+                if (!ps.HadErrors)
                 {
-                    foreach (var error in ps.Streams.Error)
+                    // Write the results to console.
+                    foreach (PSObject result in results2)
                     {
-
+                        moduleName += "<br/>2 " + result.ToString();
                     }
                 }
-                foreach (var result in results)
+                else
                 {
-
+                    // Write the errors to console by accessing the error stream of the Powershell object.
+                    foreach (ErrorRecord error in ps.Streams.Error)
+                    {
+                        moduleName += "<br/> 2 Error  " + error.ToString();
+                    }
                 }
-
+               
             }
             catch (Exception ex)
             {
-                //log.LogInformation(ex.Message);
+                moduleName = "Whole Error Message " + ex.Message + " --- " + ex.StackTrace;
             }
             finally
             {
@@ -141,11 +147,11 @@ namespace Demo.RunExchangeOnlinePowershell.Controllers
             //{
             //    throw;
             //}
-            string moduleName = "None Loaded";
-            if (iss.Modules.Count > 0)
-            {
-                moduleName = iss.Modules[0].Name;
-            }
+            
+            //if (iss.Modules.Count > 0)
+            //{
+            //    moduleName = iss.Modules[0].Name;
+            //}
             return Content(moduleName);
         }
 

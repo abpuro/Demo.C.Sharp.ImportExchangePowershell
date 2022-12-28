@@ -7,14 +7,175 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ExchangeOnlineManagement\**" />
-    <Content Remove="ExchangeOnlineManagement\**" />
-    <EmbeddedResource Remove="ExchangeOnlineManagement\**" />
-    <None Remove="ExchangeOnlineManagement\**" />
+    <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.3.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.3.0" />
+    <Content Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.Exchange.Management.ExoPowershellGalleryModule.deps.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\en-US\ExchangeOnlineManagement-Help.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\en-US\Microsoft.Exchange.Management.RestApiClient.dll-Help.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\ExchangeOnlineManagement.psd1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\ExchangeOnlineManagement.psm1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.Exchange.Management.AdminApiProvider.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.Exchange.Management.ExoPowershellGalleryModule.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.Exchange.Management.RestApiClient.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.Identity.Client.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.IdentityModel.JsonWebTokens.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.IdentityModel.Logging.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.IdentityModel.Tokens.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.OData.Client.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.OData.Core.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.OData.Edm.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.Online.CSE.RestApiPowerShellModule.Instrumentation.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.Spatial.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Microsoft.Win32.Registry.AccessControl.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\System.Configuration.ConfigurationManager.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\System.Diagnostics.PerformanceCounter.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\System.IdentityModel.Tokens.Jwt.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\System.IO.Abstractions.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\System.Management.Automation.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\System.Runtime.CompilerServices.Unsafe.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\System.Security.Cryptography.Pkcs.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\System.Security.Cryptography.ProtectedData.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\System.Security.Permissions.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netCore\System.Text.Encoding.CodePages.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Create-SelfSignedCertificate.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\ExchangeOnlineManagement.psm1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.Exchange.Management.AdminApiProvider.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.Exchange.Management.ExoPowershellGalleryModule.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.Exchange.Management.RestApiClient.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.Identity.Client.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.Identity.Client.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.IdentityModel.Clients.ActiveDirectory.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.IdentityModel.Clients.ActiveDirectory.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.OData.Client.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.OData.Client.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.OData.Core.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.OData.Core.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.OData.Edm.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.OData.Edm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.Online.CSE.RestApiPowerShellModule.Instrumentation.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.Spatial.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Microsoft.Spatial.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\Newtonsoft.Json.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\ref\Microsoft.Exchange.Management.ExoPowershellGalleryModule.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\System.IO.Abstractions.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\netFramework\System.Management.Automation.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Modules\ExchangeOnlineManagement\2.0.5\PSGetModuleInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
